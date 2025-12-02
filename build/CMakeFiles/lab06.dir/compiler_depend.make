@@ -819,7 +819,12 @@ CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: ../GUIMyFrame1.cpp \
   /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
   /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
   /usr/include/c++/11/bits/fstream.tcc \
-  ../vecmat.h
+  ../vecmat.h \
+  /usr/include/c++/11/iostream \
+  /usr/include/wx-3.0/wx/msgdlg.h \
+  /usr/include/wx-3.0/wx/stockitem.h \
+  /usr/include/wx-3.0/wx/generic/msgdlgg.h \
+  /usr/include/wx-3.0/wx/gtk/msgdlg.h
 
 CMakeFiles/lab06.dir/main.cpp.o: ../main.cpp \
   /usr/include/stdc-predef.h \
@@ -1413,8 +1418,6 @@ CMakeFiles/lab06.dir/vecmat.cpp.o: ../vecmat.cpp \
 
 /usr/include/wx-3.0/wx/dataobj.h:
 
-/usr/include/wx-3.0/wx/stockitem.h:
-
 /usr/include/wx-3.0/wx/menu.h:
 
 /usr/include/wx-3.0/wx/gtk/menuitem.h:
@@ -1454,6 +1457,8 @@ CMakeFiles/lab06.dir/vecmat.cpp.o: ../vecmat.cpp \
 /usr/include/wx-3.0/wx/wx.h:
 
 ../main.cpp:
+
+/usr/include/wx-3.0/wx/stockitem.h:
 
 /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h:
 

@@ -53,10 +53,10 @@ RM = /usr/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src"
+CMAKE_SOURCE_DIR = /home/kridtina/Desktop/biblioteki_graficzne/stud_src
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build"
+CMAKE_BINARY_DIR = /home/kridtina/Desktop/biblioteki_graficzne/stud_src/build
 
 # Include any dependencies generated for this target.
 include CMakeFiles/lab06.dir/depend.make
@@ -72,58 +72,58 @@ include CMakeFiles/lab06.dir/flags.make
 CMakeFiles/lab06.dir/main.cpp.o: CMakeFiles/lab06.dir/flags.make
 CMakeFiles/lab06.dir/main.cpp.o: ../main.cpp
 CMakeFiles/lab06.dir/main.cpp.o: CMakeFiles/lab06.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab06.dir/main.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/main.cpp.o -MF CMakeFiles/lab06.dir/main.cpp.o.d -o CMakeFiles/lab06.dir/main.cpp.o -c "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/main.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/lab06.dir/main.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/main.cpp.o -MF CMakeFiles/lab06.dir/main.cpp.o.d -o CMakeFiles/lab06.dir/main.cpp.o -c /home/kridtina/Desktop/biblioteki_graficzne/stud_src/main.cpp
 
 CMakeFiles/lab06.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/main.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/main.cpp" > CMakeFiles/lab06.dir/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kridtina/Desktop/biblioteki_graficzne/stud_src/main.cpp > CMakeFiles/lab06.dir/main.cpp.i
 
 CMakeFiles/lab06.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/main.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/main.cpp" -o CMakeFiles/lab06.dir/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kridtina/Desktop/biblioteki_graficzne/stud_src/main.cpp -o CMakeFiles/lab06.dir/main.cpp.s
 
 CMakeFiles/lab06.dir/vecmat.cpp.o: CMakeFiles/lab06.dir/flags.make
 CMakeFiles/lab06.dir/vecmat.cpp.o: ../vecmat.cpp
 CMakeFiles/lab06.dir/vecmat.cpp.o: CMakeFiles/lab06.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab06.dir/vecmat.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/vecmat.cpp.o -MF CMakeFiles/lab06.dir/vecmat.cpp.o.d -o CMakeFiles/lab06.dir/vecmat.cpp.o -c "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/vecmat.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/lab06.dir/vecmat.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/vecmat.cpp.o -MF CMakeFiles/lab06.dir/vecmat.cpp.o.d -o CMakeFiles/lab06.dir/vecmat.cpp.o -c /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.cpp
 
 CMakeFiles/lab06.dir/vecmat.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/vecmat.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/vecmat.cpp" > CMakeFiles/lab06.dir/vecmat.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.cpp > CMakeFiles/lab06.dir/vecmat.cpp.i
 
 CMakeFiles/lab06.dir/vecmat.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/vecmat.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/vecmat.cpp" -o CMakeFiles/lab06.dir/vecmat.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.cpp -o CMakeFiles/lab06.dir/vecmat.cpp.s
 
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: CMakeFiles/lab06.dir/flags.make
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: ../GUIMyFrame1.cpp
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: CMakeFiles/lab06.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o -MF CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o.d -o CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o -c "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o -MF CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o.d -o CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o -c /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp
 
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/GUIMyFrame1.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp" > CMakeFiles/lab06.dir/GUIMyFrame1.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp > CMakeFiles/lab06.dir/GUIMyFrame1.cpp.i
 
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/GUIMyFrame1.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp" -o CMakeFiles/lab06.dir/GUIMyFrame1.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp -o CMakeFiles/lab06.dir/GUIMyFrame1.cpp.s
 
 CMakeFiles/lab06.dir/GUI.cpp.o: CMakeFiles/lab06.dir/flags.make
 CMakeFiles/lab06.dir/GUI.cpp.o: ../GUI.cpp
 CMakeFiles/lab06.dir/GUI.cpp.o: CMakeFiles/lab06.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir="/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab06.dir/GUI.cpp.o"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/GUI.cpp.o -MF CMakeFiles/lab06.dir/GUI.cpp.o.d -o CMakeFiles/lab06.dir/GUI.cpp.o -c "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUI.cpp"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/lab06.dir/GUI.cpp.o"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/lab06.dir/GUI.cpp.o -MF CMakeFiles/lab06.dir/GUI.cpp.o.d -o CMakeFiles/lab06.dir/GUI.cpp.o -c /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.cpp
 
 CMakeFiles/lab06.dir/GUI.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/lab06.dir/GUI.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUI.cpp" > CMakeFiles/lab06.dir/GUI.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.cpp > CMakeFiles/lab06.dir/GUI.cpp.i
 
 CMakeFiles/lab06.dir/GUI.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/lab06.dir/GUI.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/GUI.cpp" -o CMakeFiles/lab06.dir/GUI.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.cpp -o CMakeFiles/lab06.dir/GUI.cpp.s
 
 # Object files for target lab06
 lab06_OBJECTS = \
@@ -141,7 +141,7 @@ lab06: CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o
 lab06: CMakeFiles/lab06.dir/GUI.cpp.o
 lab06: CMakeFiles/lab06.dir/build.make
 lab06: CMakeFiles/lab06.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir="/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles" --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lab06"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Linking CXX executable lab06"
 	$(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/lab06.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
@@ -153,6 +153,6 @@ CMakeFiles/lab06.dir/clean:
 .PHONY : CMakeFiles/lab06.dir/clean
 
 CMakeFiles/lab06.dir/depend:
-	cd "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build" && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src" "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src" "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build" "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build" "/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles/lab06.dir/DependInfo.cmake" --color=$(COLOR)
+	cd /home/kridtina/Desktop/biblioteki_graficzne/stud_src/build && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/kridtina/Desktop/biblioteki_graficzne/stud_src /home/kridtina/Desktop/biblioteki_graficzne/stud_src /home/kridtina/Desktop/biblioteki_graficzne/stud_src/build /home/kridtina/Desktop/biblioteki_graficzne/stud_src/build /home/kridtina/Desktop/biblioteki_graficzne/stud_src/build/CMakeFiles/lab06.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/lab06.dir/depend
 

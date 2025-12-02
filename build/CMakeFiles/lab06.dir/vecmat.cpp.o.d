@@ -1,7 +1,7 @@
 CMakeFiles/lab06.dir/vecmat.cpp.o: \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/vecmat.cpp \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.cpp \
  /usr/include/stdc-predef.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/vecmat.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.h \
  /usr/include/stdio.h \
  /usr/include/x86_64-linux-gnu/bits/libc-header-start.h \
  /usr/include/features.h /usr/include/features-time64.h \

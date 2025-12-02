@@ -1,7 +1,7 @@
 CMakeFiles/lab06.dir/GUI.cpp.o: \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUI.cpp \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.cpp \
  /usr/include/stdc-predef.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUI.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.h \
  /usr/include/wx-3.0/wx/artprov.h /usr/include/wx-3.0/wx/string.h \
  /usr/include/wx-3.0/wx/defs.h /usr/include/wx-3.0/wx/platform.h \
  /usr/include/wx-3.0/wx/compiler.h \

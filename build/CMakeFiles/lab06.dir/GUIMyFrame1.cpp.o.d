@@ -1,8 +1,8 @@
 CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.cpp \
  /usr/include/stdc-predef.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUIMyFrame1.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUI.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.h \
  /usr/include/wx-3.0/wx/artprov.h /usr/include/wx-3.0/wx/string.h \
  /usr/include/wx-3.0/wx/defs.h /usr/include/wx-3.0/wx/platform.h \
  /usr/include/wx-3.0/wx/compiler.h \
@@ -311,4 +311,8 @@ CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o: \
  /usr/include/x86_64-linux-gnu/c++/11/bits/basic_file.h \
  /usr/include/x86_64-linux-gnu/c++/11/bits/c++io.h \
  /usr/include/c++/11/bits/fstream.tcc \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/vecmat.h
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/vecmat.h \
+ /usr/include/c++/11/iostream /usr/include/wx-3.0/wx/msgdlg.h \
+ /usr/include/wx-3.0/wx/stockitem.h \
+ /usr/include/wx-3.0/wx/generic/msgdlgg.h \
+ /usr/include/wx-3.0/wx/gtk/msgdlg.h

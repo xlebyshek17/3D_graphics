@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_DEFINES = 
 
-CXX_INCLUDES = -I/usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.0 -I/usr/include/wx-3.0 -I"/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/-D_FILE_OFFSET_BITS=64" -I"/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/-DWXUSINGDLL" -I"/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/-D__WXGTK__" -I"/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/-pthread" -I"/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src"
+CXX_INCLUDES = -I/usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.0 -I/usr/include/wx-3.0 -I/home/kridtina/Desktop/biblioteki_graficzne/stud_src/-D_FILE_OFFSET_BITS=64 -I/home/kridtina/Desktop/biblioteki_graficzne/stud_src/-DWXUSINGDLL -I/home/kridtina/Desktop/biblioteki_graficzne/stud_src/-D__WXGTK__ -I/home/kridtina/Desktop/biblioteki_graficzne/stud_src/-pthread -I/home/kridtina/Desktop/biblioteki_graficzne/stud_src
 
 CXX_FLAGS = -I/usr/lib/x86_64-linux-gnu/wx/include/gtk3-unicode-3.0 -I/usr/include/wx-3.0 -D_FILE_OFFSET_BITS=64 -DWXUSINGDLL -D__WXGTK__ -pthread -std=gnu++17
 

@@ -3,6 +3,8 @@
 #include <fstream>
 #include "vecmat.h"
 #include <cmath>
+#include <iostream>
+#include <wx/msgdlg.h>
 
 struct Point {
     float x, y, z;
@@ -37,6 +39,11 @@ GUIMyFrame1::GUIMyFrame1( wxWindow* parent ) : MyFrame1( parent )
     WxSB_ScaleX->SetRange(1, 200); WxSB_ScaleX->SetValue(100);
     WxSB_ScaleY->SetRange(1, 200); WxSB_ScaleY->SetValue(100);
     WxSB_ScaleZ->SetRange(1, 200); WxSB_ScaleZ->SetValue(100);
+
+    this->Bind(wxEVT_SIZE, [this](wxSizeEvent& event) {
+        this->WxPanel->Refresh(); 
+        event.Skip();
+    });
 }
 
 void GUIMyFrame1::WxPanel_Repaint( wxUpdateUIEvent& event )
@@ -63,11 +70,13 @@ void GUIMyFrame1::m_button_load_geometry_click( wxCommandEvent& event )
                 data.push_back(Segment(Point(x1, y1, z1), Point(x2, y2, z2), Color(r, g, b)));
             }
             in.close();
+
+            Repaint();
         }
     }
 }
 
-void GUIMyFrame1::Scrolls_Updated( wxScrollEvent& event )
+void GUIMyFrame1::Scrolls_Updated( wxScrollEvent& event)
 {
     WxST_TranslationX->SetLabel(wxString::Format(wxT("%g"), (WxSB_TranslationX->GetValue() - 100) / 50.0));
     WxST_TranslationY->SetLabel(wxString::Format(wxT("%g"), (WxSB_TranslationY->GetValue() - 100) / 50.0));
@@ -94,116 +103,106 @@ void GUIMyFrame1::Repaint()
     dc.Clear();
 
     int w, h;
-    WxPanel->GetSize(&w, &h);
-    dc.SetDeviceOrigin(w / 2, h / 2); 
+    WxPanel->GetClientSize(&w, &h);
 
-    // 2. Pobranie wartości z suwaków
-    // Translacja (zakładamy zakres np. -2.0 do 2.0 dla widoczności)
+    dc.SetDeviceOrigin(w / 2, h / 2);
+
     double tx = (WxSB_TranslationX->GetValue() - 100) / 50.0;
     double ty = (WxSB_TranslationY->GetValue() - 100) / 50.0;
-    // Translacja Z: dodajemy offset, żeby obiekt nie był "w oku" kamery na starcie
-    double tz = (WxSB_TranslationZ->GetValue() - 100) / 50.0 + 2.0; 
+    double tz = (WxSB_TranslationZ->GetValue() - 100) / 50.0 + 2.0;
 
-    // Obroty (w radianach)
+    // Obroty
     double rx = WxSB_RotateX->GetValue() * M_PI / 180.0;
     double ry = WxSB_RotateY->GetValue() * M_PI / 180.0;
     double rz = WxSB_RotateZ->GetValue() * M_PI / 180.0;
 
-    // Skalowanie
+    // Skala
     double sx = WxSB_ScaleX->GetValue() / 100.0;
     double sy = WxSB_ScaleY->GetValue() / 100.0;
     double sz = WxSB_ScaleZ->GetValue() / 100.0;
 
-    // 3. Budowa macierzy transformacji
     // Macierz Skalowania
     Matrix4 matScale;
     matScale.data[0][0] = sx;
     matScale.data[1][1] = sy;
     matScale.data[2][2] = sz;
+    matScale.data[3][3] = 1.0;
 
-    // Macierz Obrotu X
-    Matrix4 matRotX;
+    // Macierze Obrotu
+    Matrix4 matRotX, matRotY, matRotZ;
+    
+    matRotX.data[0][0] = 1.0;
     matRotX.data[1][1] = cos(rx); 
     matRotX.data[1][2] = -sin(rx);
     matRotX.data[2][1] = sin(rx); 
     matRotX.data[2][2] = cos(rx);
+    matRotX.data[3][3] = 1.0;
 
-    // Macierz Obrotu Y
-    Matrix4 matRotY;
     matRotY.data[0][0] = cos(ry); 
+    matRotY.data[1][1] = 1.0;
     matRotY.data[0][2] = sin(ry);
     matRotY.data[2][0] = -sin(ry); 
     matRotY.data[2][2] = cos(ry);
+    matRotY.data[3][3] = 1.0;
 
-    // Macierz Obrotu Z
-    Matrix4 matRotZ;
     matRotZ.data[0][0] = cos(rz); 
     matRotZ.data[0][1] = -sin(rz);
     matRotZ.data[1][0] = sin(rz); 
     matRotZ.data[1][1] = cos(rz);
+    matRotZ.data[2][2] = 1.0;
+    matRotZ.data[3][3] = 1.0;
 
     // Macierz Translacji
     Matrix4 matTrans;
+    matTrans.data[0][0] = 1.0;
+    matTrans.data[1][1] = 1.0;
+    matTrans.data[2][2] = 1.0;
+    matTrans.data[3][3] = 1.0;
     matTrans.data[0][3] = tx;
     matTrans.data[1][3] = ty;
     matTrans.data[2][3] = tz;
 
-    // Złożenie transformacji: M = T * Rx * Ry * Rz * S
-    // Uwaga: Klasa Matrix4 z vecmat.h ma proste mnożenie. 
-    // Sprawdzamy czy mnożymy M1 * M2.
     Matrix4 transform = matTrans * matRotX * matRotY * matRotZ * matScale;
 
-    // 4. Rysowanie wektorów
+    dc.SetPen(wxPen(wxColor(0, 0, 0))); 
+
     for (const auto& segment : data)
     {
-        // Tworzenie wektorów początkowych (jedynka na końcu dla współrzędnych jednorodnych)
         Vector4 v1, v2;
         v1.Set(segment.begin.x, segment.begin.y, segment.begin.z);
         v2.Set(segment.end.x, segment.end.y, segment.end.z);
 
-        // Aplikacja transformacji
+        
         v1 = transform * v1;
         v2 = transform * v2;
 
-        // 5. Przycinanie (Clipping) względem płaszczyzny rzutowania (rzutnia)
-        // Zakładamy Near Plane na z = 0.1 (aby uniknąć dzielenia przez 0 i obiektów za kamerą)
-        double zNear = 0.1;
+        double zNear = 0.1; 
 
-        // Jeśli oba punkty są za kamerą, pomijamy odcinek
-        if (v1.GetZ() < zNear && v2.GetZ() < zNear)
-            continue;
+        if (v1.GetZ() < zNear && v2.GetZ() < zNear) continue;
 
-        // Jeśli jeden punkt jest za kamerą, przycinamy go do płaszczyzny
-        if (v1.GetZ() < zNear)
-        {
+        if (v1.GetZ() < zNear) {
             double t = (zNear - v1.GetZ()) / (v2.GetZ() - v1.GetZ());
             v1.data[0] = v1.GetX() + (v2.GetX() - v1.GetX()) * t;
             v1.data[1] = v1.GetY() + (v2.GetY() - v1.GetY()) * t;
             v1.data[2] = zNear;
         }
-        else if (v2.GetZ() < zNear)
-        {
+     
+        else if (v2.GetZ() < zNear) {
             double t = (zNear - v2.GetZ()) / (v1.GetZ() - v2.GetZ());
             v2.data[0] = v2.GetX() + (v1.GetX() - v2.GetX()) * t;
             v2.data[1] = v2.GetY() + (v1.GetY() - v2.GetY()) * t;
             v2.data[2] = zNear;
         }
 
-        // 6. Rzutowanie perspektywiczne i mapowanie na ekran
-        // x' = x / z, y' = y / z
-        // Dodatkowo skalujemy wynik (np. * 300), aby dopasować go do pikseli ekranu
-        // Odwracamy oś Y ( * -1), bo na ekranie Y rośnie w dół.
-        
-        double focus = 300.0; // Ogniskowa / skala rzutowania
+        double focus = std::min(w, h) * 0.8; 
 
         double x1_2d = (v1.GetX() / v1.GetZ()) * focus;
-        double y1_2d = (v1.GetY() / v1.GetZ()) * focus * -1; // Odwrócenie Y
-
+        double y1_2d = (v1.GetY() / v1.GetZ()) * focus;
+        
         double x2_2d = (v2.GetX() / v2.GetZ()) * focus;
-        double y2_2d = (v2.GetY() / v2.GetZ()) * focus * -1; // Odwrócenie Y
+        double y2_2d = (v2.GetY() / v2.GetZ()) * focus;
 
-        // Rysowanie linii
         dc.SetPen(wxPen(wxColor(segment.color.R, segment.color.G, segment.color.B)));
-        dc.DrawLine(x1_2d, y1_2d, x2_2d, y2_2d);
+        dc.DrawLine(x1_2d, -y1_2d, x2_2d, -y2_2d);
     }
 }

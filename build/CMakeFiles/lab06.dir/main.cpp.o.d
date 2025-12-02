@@ -1,5 +1,5 @@
 CMakeFiles/lab06.dir/main.cpp.o: \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/main.cpp \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/main.cpp \
  /usr/include/stdc-predef.h /usr/include/wx-3.0/wx/wx.h \
  /usr/include/wx-3.0/wx/defs.h /usr/include/wx-3.0/wx/platform.h \
  /usr/include/wx-3.0/wx/compiler.h \
@@ -357,8 +357,8 @@ CMakeFiles/lab06.dir/main.cpp.o: \
  /usr/include/wx-3.0/wx/gtk/filedlg.h \
  /usr/include/wx-3.0/wx/gtk/filectrl.h /usr/include/wx-3.0/wx/filectrl.h \
  /usr/include/wx-3.0/wx/mdi.h /usr/include/wx-3.0/wx/gtk/mdi.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUIMyFrame1.h \
- /home/kridtina/Рабочий\ стол/biblioteki_graficzne/stud_src/GUI.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUIMyFrame1.h \
+ /home/kridtina/Desktop/biblioteki_graficzne/stud_src/GUI.h \
  /usr/include/wx-3.0/wx/artprov.h /usr/include/wx-3.0/wx/xrc/xmlres.h \
  /usr/include/wx-3.0/wx/filesys.h /usr/include/wx-3.0/wx/filename.h \
  /usr/include/wx-3.0/wx/file.h /usr/include/wx-3.0/wx/convauto.h \
