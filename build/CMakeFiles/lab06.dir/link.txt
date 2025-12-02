@@ -1,0 +1,1 @@
+/usr/bin/c++ CMakeFiles/lab06.dir/main.cpp.o CMakeFiles/lab06.dir/vecmat.cpp.o CMakeFiles/lab06.dir/GUIMyFrame1.cpp.o CMakeFiles/lab06.dir/GUI.cpp.o -o lab06  -L/usr/lib/x86_64-linux-gnu -pthread -lwx_gtk3u_core-3.0 -lwx_baseu-3.0 -lwx_gtk3u_aui-3.0 

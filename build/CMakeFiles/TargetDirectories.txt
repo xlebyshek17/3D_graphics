@@ -1,0 +1,3 @@
+/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles/lab06.dir
+/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles/edit_cache.dir
+/home/kridtina/Рабочий стол/biblioteki_graficzne/stud_src/build/CMakeFiles/rebuild_cache.dir
