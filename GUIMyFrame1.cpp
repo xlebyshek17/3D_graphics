@@ -87,8 +87,8 @@ void GUIMyFrame1::Scrolls_Updated( wxScrollEvent& event )
 
 void GUIMyFrame1::Repaint()
 {
-    wxClientDC dc(WxPanel);
-    wxBufferedDC dc(&dc);
+    wxClientDC __dc(WxPanel);
+    wxBufferedDC dc(&__dc);
 
     dc.SetBackground(wxBrush(wxColor(255, 255, 255)));
     dc.Clear();
